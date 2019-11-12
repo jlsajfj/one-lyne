@@ -1,6 +1,11 @@
 arr = ['.']*9
 
 
+def toBool(c):
+  return c=='.'
+aConv = map(toBool, arr)
+
+
 won = False
 while not won:
   #player input with verification
