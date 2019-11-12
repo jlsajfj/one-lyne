@@ -1,20 +1,8 @@
 arr = ['.']*9
 t = [0,1,2]
 var = 1
-won = False
+won = True
 
-
-def diag1(ch):
-  for _ in t:
-    if arr[_*4] != ch:
-      return False
-  return True
-def diag2(ch):
-  for _ in t:
-    if arr[_*2+2] != ch:
-      return False
-  return True
-  
 
 while not won:
   var = var * -1
@@ -23,6 +11,8 @@ while not won:
 
   print (lambda ch: any(map(lambda a: all(map(lambda __: False if arr[a[0]*3+__] != a[1] else True, t)),([i,ch] for i in t))))('x' if var == -1 else 'o')
   print (lambda ch: any(map(lambda a: all(map(lambda __: False if arr[__*3+a[0]] != a[1] else True, t)),([i,ch] for i in t))))('x' if var == -1 else 'o')
+  print (lambda ch: all(map(lambda _: arr[_*4] == ch, t)))('x' if var == -1 else 'o')
+  print (lambda ch: all(map(lambda _: arr[_*2+2] == ch, t)))('x' if var == -1 else 'o')
   print not any(map(lambda c: c=='.', arr))
 
 
