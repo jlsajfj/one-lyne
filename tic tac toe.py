@@ -10,8 +10,6 @@ def rowCheck(_, ch):
 def allRow(ch):
   return all(map(rowCheck,([i,ch] for i in range(3))))
 
-print rowCheck(0,'.')
-
 won = False
 while not won:
   #player input with verification
