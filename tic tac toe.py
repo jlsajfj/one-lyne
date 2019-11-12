@@ -7,8 +7,8 @@ def rowCheck(_, ch):
       return False
   return True
 
-def allRow(ch):
-  return all(map(rowCheck,([i,ch] for i in range(3))))
+def row(ch):
+  return any(map(rowCheck,([i,ch] for i in range(3))))
 
 won = False
 while not won:
