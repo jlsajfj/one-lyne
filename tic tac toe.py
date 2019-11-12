@@ -2,9 +2,7 @@ arr = ['.']*9
 
 
 def rowCheck(_, ch):
-  for __ in range(3):
-    if arr[_*3+__] != ch:
-      return False
+  print map(lambda __: False if arr[_*3+__] != ch else True, [0,1,2])
   return True
 
 def row(ch):
