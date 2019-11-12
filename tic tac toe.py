@@ -1,8 +1,7 @@
 arr = ['.']*9
 
 
-def row(ch):
-  return any(map(lambda a: all(map(lambda __: False if arr[a[0]*3+__] != a[1] else True, [0,1,2])),([i,ch] for i in range(3))))
+lambda ch: any(map(lambda a: all(map(lambda __: False if arr[a[0]*3+__] != a[1] else True, [0,1,2])),([i,ch] for i in range(3))))
 
 
 won = False
