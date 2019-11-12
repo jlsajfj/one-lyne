@@ -3,12 +3,18 @@ t = [0,1,2]
 var = 1
 won = False
 
+
 def diag1(ch):
   for _ in t:
     if arr[_*4] != ch:
       return False
   return True
-
+def diag2(ch):
+  for _ in t:
+    if arr[_*2+2] != ch:
+      return False
+  return True
+  
 
 while not won:
   var = var * -1
