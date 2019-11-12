@@ -1,6 +1,8 @@
 arr = ['.']*9
 
 
+print map(int,raw_input().split()) if input()==1 else [__import__("random").randint(1,3),__import__("random").randint(1,3)]
+
 
 won = True
 while not won:
