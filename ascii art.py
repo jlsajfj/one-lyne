@@ -1,0 +1,1 @@
+print '\n'.join((lambda a:(lambda ar=[' ']*a[0]*a[1]:[map(lambda c:(lambda b:__import__("operator").setitem(ar,int(b[1])*a[0]+int(b[0]),b[2]))(raw_input().split()),[0]*input()),map(lambda x: "".join(ar[x*a[0]:(x+1)*a[0]]),range(a[1]))])())(map(int,raw_input().split()))[1])
