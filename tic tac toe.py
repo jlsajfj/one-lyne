@@ -2,11 +2,11 @@ arr = ['.']*9
 
 
 def rowCheck(_, ch):
-  print map(lambda __: False if arr[_*3+__] != ch else True, [0,1,2])
-  return True
+  return all(map(lambda __: False if arr[_*3+__] != ch else True, [0,1,2]))
 
 def row(ch):
   return any(map(rowCheck,([i,ch] for i in range(3))))
+
 
 won = False
 while not won:
