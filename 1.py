@@ -1,0 +1,1 @@
+[*map(lambda z: abs(z[0]*(len(nums)-1)- [*z[1]][0]),enumerate(map(lambda y: [*map(lambda x: x[0], filter(lambda f: target-f[1] in y[f[0]+1:], [(i,x) for i,x in enumerate(y)]))], [nums, nums[::-1]])))]
